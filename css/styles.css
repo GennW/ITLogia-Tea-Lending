@@ -1,0 +1,134 @@
+body {
+    /* background: #E5E5E5; */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.btn-outline-success {
+    --bs-btn-color: #007BFF;
+    --bs-btn-border-color: #007BFF;
+    --bs-btn-active-bg: #007BFF;
+    --bs-btn-active-border-color: #007BFF;
+}
+
+.btn {
+    --bs-btn-padding-x: 2.75rem;
+}
+
+.btn.btn-outline-success {
+    --bs-btn-padding-x: 1.75rem;
+}
+
+.btn:hover {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.btn-primary {
+    --bs-btn-bg: #076BFF;
+    --bs-btn-border-color: #076BFF;
+}
+
+:not(.btn-check)+.btn:active {
+    background-color: #076bff;
+    border-color: #076bff;
+}
+
+/* slick */
+.slick-prev,
+.slick-next {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.slick-next, .slick-next:hover {
+    right: 14px;
+    background-image: url('../img/arrowRight.svg');
+}
+
+.slick-prev, .slick-prev:hover {
+    left: 14px;
+    background-image: url('../img/arrowLeft.svg');
+
+}
+
+
+.slick-prev:before, .slick-next:before {
+    content: unset;
+}
+
+
+
+/* accordion */
+.ui-state-default {
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(360deg, #076BFF 0%, #007BFF 100%)
+}
+
+.ui-widget-content {
+    border: none;
+}
+
+.ui-icon, .ui-icon:hover {
+    background-position: unset;
+
+    background-image: url('../img/arrow.svg');
+    float: right;
+    width: 22px;
+    height: 22px;
+}
+
+.ui-state-active .ui-icon, .ui-button:active .ui-icon {
+    background-image: url('../img/arrow.svg');
+    transform: rotate(180deg);
+
+}
+
+.ui-state-hover .ui-icon {
+    background-image: url('../img/arrow.svg');
+
+}
+
+
+/* анимация */
+
+.animate__animated.animate__heartBeat,
+.animate__animated.animate__pulse {
+    --animate-duration: 3s;
+}
+
+/* Hover.css lib */
+.hvr-bubble-float-top:before {
+    border-color: transparent transparent #076BFF;
+}
+
+.hvr-underline-from-center::before {
+    background: #076BFF;
+    height: 2px;
+}
+
+/* Float Shadow */
+.hvr-float-shadow:before {
+    background: -webkit-radial-gradient(center, ellipse, rgba(7, 107, 255, 0.35) 0%, rgba(7, 107, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(7, 107, 255, 0.35) 0%, rgba(7, 107, 255, 0) 80%);
+}
+
+@media screen and (max-width: 992px) {
+
+    .slick-prev,
+    .slick-next {
+        transform: scale(0.7);
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .slick-prev,
+    .slick-next {
+        transform: scale(0.5);
+    }
+}
